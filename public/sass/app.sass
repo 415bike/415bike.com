@@ -1,0 +1,56 @@
+@import "compass"
+
+$background_color: #CC5100
+$heading_color: #FFF
+$text_color: #FFF
+$link_color: #FFF
+
+html, body
+  //font-family: "Helvetica Neue", Helvetica, Arial, sans
+  font-family: 'Lato', sans-serif
+  background-color: $background_color
+  color: $text_color
+  margin: 0
+  padding: 0
+  
+#content
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  min-width: 320px
+  max-width: 800px
+
+#iphone
+  display: block
+  float: left
+  overflow: hidden
+  min-width: 320px
+  margin: 40px 0 0 0
+
+#guts
+  display: block
+  float: left
+  overflow: hidden
+  max-width: 320px
+  margin: 0 0 0 30px
+    
+  h1
+    font-size: 64px
+    margin-top: 60px
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+    
+  p
+    font-size: 24px
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+    
+  ul.features
+    list-style-position: inside
+    margin: 0
+    padding: 0
+    > li
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+      font-size: 18px
+      padding: 10px 0
+      a
+        color: $link_color
+        text-decoration: none
