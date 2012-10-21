@@ -1,56 +1,113 @@
 @import "compass"
+@import "compass/css3"
+@import "media-queries"
+@import "zazz"
 
 $background_color: #CC5100
 $heading_color: #FFF
 $text_color: #FFF
 $link_color: #FFF
+$button_color: #BC3C15
 
-html, body
+=good_font
   //font-family: "Helvetica Neue", Helvetica, Arial, sans
   font-family: 'Lato', sans-serif
+
+html, body
+  +good_font
   background-color: $background_color
   color: $text_color
   margin: 0
   padding: 0
   
 #content
-  margin-left: auto
-  margin-right: auto
-  position: relative
-  min-width: 320px
-  max-width: 800px
-
+  +flexible_centered_container(768px)
+  
 #iphone
-  display: block
-  float: left
-  overflow: hidden
+  +float_left
   min-width: 320px
   margin: 40px 0 0 0
+  //background-color: red
+
+  +tablet-portrait-and-below
+    +no_float
+    +flexible_centered_container(320px)
 
 #guts
-  display: block
-  float: left
-  overflow: hidden
-  max-width: 320px
+  +float_left
+  min-width: 320px
+  max-width: 400px
   margin: 0 0 0 30px
-    
-  h1
-    font-size: 64px
-    margin-top: 60px
+  //background-color: blue
+
+  +tablet-portrait-and-below
+    +no_float
+    +flexible_centered_container(320px)
+
+h1
+  font-size: 64px
+  margin: 60px 0 10px 0
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+  
+  +tablet-portrait-and-below
+    margin-top: 20px
+    text-align: center
+
+p
+  font-size: 24px
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+  color: #FFB74A
+  margin: 0
+  padding: 0
+  
+  +tablet-portrait-and-below
+    text-align: center      
+      
+ul.features
+  list-style-position: inside
+  margin: 30px 0 20px 0
+  padding: 0
+  > li
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
-    
-  p
-    font-size: 24px
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
-    
-  ul.features
-    list-style-position: inside
-    margin: 0
-    padding: 0
-    > li
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
-      font-size: 18px
-      padding: 10px 0
-      a
-        color: $link_color
-        text-decoration: none
+    font-size: 18px
+    padding: 7px 0
+    a
+      color: $link_color
+      text-decoration: underline
+      
+  +tablet-portrait-and-below
+    margin-left: 20px
+
+p.colophon
+  font-size: 14px
+  color: #842D21
+  text-shadow: none
+  padding: 10px 10px 40px 10px
+  a
+    color: #842D21
+    text-decoration: none
+
+
+#mc_embed_signup
+  +no_float
+  margin: 20px 0 0 0
+  input.email
+    +float_left
+    font-size: 14px
+    padding: 6px
+    +border-radius(3px)
+    width: 200px
+  input.button
+    +float_left
+    +good_font
+    padding: 10px
+    font-size: 14px
+    margin: 0 0 0 10px
+    background-color: $button_color
+    +border-radius(6px)
+    color: white
+    border: none
+    outline: none 
+    cursor: pointer
+    &:hover, &:focus
+      background-color: darken($button_color, 10%)

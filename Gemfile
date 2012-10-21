@@ -6,6 +6,7 @@ gem 'coffee-script'
 gem 'redcarpet'
 gem 'foreman'
 gem 'thin'
+gem 'rdiscount'
 
 group :assets do
   gem 'compass'
