@@ -1,4 +1,5 @@
 @import "compass"
+
 @import "compass/css3"
 @import "media-queries"
 @import "zazz"
@@ -58,36 +59,12 @@ p
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
   color: #FFB74A
   margin: 0
-  padding: 0
   
   +tablet-portrait-and-below
-    text-align: center      
-      
-ul.features
-  list-style-position: inside
-  margin: 30px 0 20px 0
-  padding: 0
-  > li
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
-    font-size: 18px
-    padding: 7px 0
-    a
-      color: $link_color
-      text-decoration: underline
-      
-  +tablet-portrait-and-below
-    margin-left: 20px
-
-p.colophon
-  font-size: 14px
-  color: #842D21
-  text-shadow: none
-  padding: 10px 10px 40px 10px
-  a
-    color: #842D21
-    text-decoration: none
-
-
+    text-align: center
+    padding-left: 10px
+    padding-right: 10px
+    
 #mc_embed_signup
   +no_float
   margin: 20px 0 0 0
@@ -110,4 +87,33 @@ p.colophon
     outline: none 
     cursor: pointer
     &:hover, &:focus
-      background-color: darken($button_color, 10%)
+      background-color: darken($button_color, 10%)      
+      
+  +tablet-portrait-and-below
+    padding: 0 10px
+    input.email
+      width: 160px
+      
+ul.features
+  list-style-position: inside
+  margin: 10px 0 20px 0
+  padding: 0
+  > li
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+    font-size: 18px
+    padding: 7px 0
+    a
+      color: $link_color
+      text-decoration: underline
+      
+  +tablet-portrait-and-below
+    margin-left: 20px
+
+p.colophon
+  font-size: 14px
+  color: #842D21
+  text-shadow: none
+  padding: 10px 10px 40px 10px
+  a
+    color: #842D21
+    text-decoration: none
